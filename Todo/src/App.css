@@ -29,9 +29,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .todoForm input {
+  width: 100%;
+  max-width: 250px;
   font-size: 18px;
   outline: none;
   border: 2px solid rgba(101, 11, 255, 1);
@@ -57,7 +60,7 @@
   height: 100%;
   margin-inline: auto;
   margin-top: 10px;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 /* todos styling */
@@ -70,6 +73,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  row-gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* for multiple color */
@@ -132,6 +137,7 @@ background: linear-gradient(48deg, rgba(255,12,240,1) 77%, rgba(250,0,139,1) 100
   border-bottom: 2px solid #161a2b;
   background-color: transparent;
   color: white;
+  text-wrap: wrap;
 }
 
 .todoText:disabled {
@@ -180,3 +186,8 @@ background: linear-gradient(48deg, rgba(255,12,240,1) 77%, rgba(250,0,139,1) 100
 }
 
 
+@media screen and (max-width: 450px) {
+  .todoHeading{
+    font-size: 20px;
+  }
+}

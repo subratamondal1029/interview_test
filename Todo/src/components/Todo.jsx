@@ -33,6 +33,7 @@ const Todo = ({
           disabled={!isEditing}
           autoFocus
           value={isEditing ? editText : todo.text}
+          title={todo.text}
           className="todoText"
           onChange={(e) => setEditText(e.target.value)}
           onBlur={() => editMathod(todo)}
